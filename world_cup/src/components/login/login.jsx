@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import Footer from '../footer/footer';
 import Header from '../header/header';
 import styles from './login.module.css'
 
@@ -28,9 +29,16 @@ const Login = ({authService}) => {
   return(
     <section className={styles.login}>
       <Header/>
-      <section>
-        <h1>Login</h1>
+      <div className={styles.loginLeft}>
+        <span className={styles.loginLeftFont}>My</span>
+        <span className={styles.loginLeftFont}>World Cup</span>
+        <span className={styles.loginLeftFont}>Maker</span>
+      </div>
+      <div className={styles.loginRight}>  
         <ul className={styles.list}>
+        <li className={styles.item}>
+            <span className={styles.loginRightFont}>로그인하기</span>
+          </li>
           <li className={styles.item}>
             <button className={styles.button} onClick={onLogin}>Google</button>
           </li>
@@ -38,7 +46,8 @@ const Login = ({authService}) => {
             <button className={styles.button} onClick={onLogin}>Github</button>
           </li>
         </ul>
-      </section>
+        <Footer/>  
+      </div>
     </section>
   )
 };

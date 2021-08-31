@@ -8,7 +8,6 @@ const Header = memo(({ onLogout }) => (
         Logout
       </button>
     )}
-    <h1 className={styles.title}>16강 월드컵 만들기</h1>
   </header>
 ));
 
