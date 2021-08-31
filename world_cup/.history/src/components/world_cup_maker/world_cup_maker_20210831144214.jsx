@@ -6,9 +6,7 @@ const WorldCupMaker = ({authService}) => {
   const history = useHistory();
   const historyState = history?.location?.state;
   const [userId, setUserId] = useState(historyState && historyState.id);
-  
   const onLogout = useCallback(() => {
-    alert("여기로온다");
     authService.logout();
   }, [authService]);
 

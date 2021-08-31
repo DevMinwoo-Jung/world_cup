@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import Header from '../header/header';
+import React from 'react';
 import styles from './login.module.css'
 
 const Login = ({authService}) => {
@@ -27,7 +25,6 @@ const Login = ({authService}) => {
 
   return(
     <section className={styles.login}>
-      <Header/>
       <section>
         <h1>Login</h1>
         <ul className={styles.list}>

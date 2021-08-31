@@ -17,7 +17,7 @@ function App({authService}) {
           <Login authService={authService} />
         </Route>
         <Route path="/maker">
-          <WorldCupMaker authService={authService}/>
+          <WorldCupMaker/>
         </Route>
         <Route path="/game">
           <Game/>

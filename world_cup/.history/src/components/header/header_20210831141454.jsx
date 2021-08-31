@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Game = () => {
+const Header = () => {
   return (
     <div>
-      <h1>힝</h1>      
+      
     </div>
   );
 };
 
-export default Game;
+export default Header;

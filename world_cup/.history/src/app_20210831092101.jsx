@@ -16,12 +16,12 @@ function App({authService}) {
         <Route exact path="/">
           <Login authService={authService} />
         </Route>
-        <Route path="/maker">
-          <WorldCupMaker authService={authService}/>
-        </Route>
         <Route path="/game">
           <Game/>
-        </Route>  
+        </Route>
+        <Route path="/maker">
+          <WorldCupMaker/>
+        </Route>
       </Switch>
     </Router>
   );
