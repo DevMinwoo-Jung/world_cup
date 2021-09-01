@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Footer from '../footer/footer';
-import Header from '../header/header';
 import styles from './login.module.css'
 
 const Login = ({authService}) => {
@@ -28,7 +27,6 @@ const Login = ({authService}) => {
 
   return(
     <section className={styles.login}>
-      <Header/>
       <div className={styles.loginLeft}>
         <span className={styles.loginLeftFont}>My</span>
         <span className={styles.loginLeftFont}>World Cup</span>

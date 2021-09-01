@@ -1,3 +1,32 @@
+@value makerBlue, makerWhite, makerBlack from '../../common/colors.css';
+
 .header {
+  height: 4rem;
+  text-align: center;
+  padding: 0.5em;
+  background-color: makerBlue;
+  position: relative;
+}
+
+.logo {
+  width: 3em;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 0;
+  color: makerWhite;
+}
+
+.logout {
   position: absolute;
+  right: 3em;
+  top: 1em;
+  padding: 0.8em;
+  border-radius: 20%;
+  background-color: makerBlack;
+  color: makerWhite;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
 }

@@ -9,7 +9,7 @@ import WorldCupMaker from './components/world_cup_maker/world_cup_maker';
 import Game from './components/game/game';
 
 
-function App({authService}) {
+function App({authService, FileInput, cupsRepository}) {
   return (
     <Router>
       <Switch>
@@ -17,7 +17,7 @@ function App({authService}) {
           <Login authService={authService} />
         </Route>
         <Route path="/maker">
-          <WorldCupMaker authService={authService}/>
+          <WorldCupMaker authService={authService} FileInput={FileInput} cupsRepository={cupsRepository}/>
         </Route>
         <Route path="/game">
           <Game/>
