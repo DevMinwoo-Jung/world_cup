@@ -17,7 +17,7 @@ const WorldCupAddForm = ({FileInput, onAdd, cups}) => {
 
   const onSubmit = event => {
     event.preventDefault();
-    const card = {
+    const cups = {
           id: Date.now(),
           title: titleRef.current.value || '',
           fileName: file.fileName || '',
@@ -25,7 +25,7 @@ const WorldCupAddForm = ({FileInput, onAdd, cups}) => {
     };
     formRef.current.reset();
     setFile({ fileName: null, fileURL: null, });
-    onAdd(card);
+    onAdd(cups);
 };
 
   return (

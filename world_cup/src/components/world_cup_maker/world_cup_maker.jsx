@@ -61,7 +61,7 @@ const WorldCupMaker = ({authService, FileInput, cupsRepository}) => {
       <Header onLogout={onLogout} />
       <div className={styles.container}>
         <Editor cups={cups} FileInput={FileInput}  addCups={createOrUpdateCups} updateCups={createOrUpdateCups} deleteCups={deleteCups}/>
-        <Lists cups={cups}/>
+        <Lists key={Date.now()} cups={cups} deleteCups={deleteCups}/>
       </div>
     </section>
   );

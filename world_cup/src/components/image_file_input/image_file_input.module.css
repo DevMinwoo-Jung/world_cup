@@ -1,4 +1,9 @@
-@value makerLightGrey, makerPink, makerLightPink from "../../common/colors.css";
+@value makerBlue, makerLightGrey, makerPink, makerLightPink from "../../common/colors.css";
+
+img {
+  width: 120px;
+  height: 120px;
+}
 
 .container {
   width: 100%;
@@ -15,6 +20,12 @@
 
 .versus {
   display: flex;
+}
+
+.versus_box {
+  display: flex;
+  border: 2px solid makerBlue;
+  margin: 2px;
 }
 
 .img_div {

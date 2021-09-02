@@ -6,7 +6,6 @@ const ImageFileInput = memo(({imageUploader, name, onFileChange, cups}) => {
   const {fileURL} = cups;
   const url = fileURL || DEFAULT_IMAGE;
 
-  const [loading, setLoading] = useState(false);
   const inputRef1 = useRef();
   const inputRef2 = useRef();
   const inputRef3 = useRef();
@@ -23,6 +22,7 @@ const ImageFileInput = memo(({imageUploader, name, onFileChange, cups}) => {
   const inputRef14 = useRef();
   const inputRef15 = useRef();
   const inputRef16 = useRef();
+
   const onButtonClick = (event) => {
     event.preventDefault();
     inputRef1.current.click();
@@ -44,10 +44,8 @@ const ImageFileInput = memo(({imageUploader, name, onFileChange, cups}) => {
   }
 
   const onChange = async event => {
-    setLoading(true);
     const uploaded = await imageUploader.upload(event.target.files[0]);
     console.log(uploaded);
-    setLoading(false);
     onFileChange({
       name: uploaded.original_filename,
       url: uploaded.url,
@@ -58,43 +56,95 @@ const ImageFileInput = memo(({imageUploader, name, onFileChange, cups}) => {
   return(
   <div className={styles.container}>
     <div className={styles.versus}>
-      <div className={styles.img_div}></div>
-      <img src={url} alt="" />
-      <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-      <img src={url} alt="" />
-      <input ref={inputRef2} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+      <div className={styles.versus_box}>  
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+      </div>  
+      <div className={styles.versus_box}>    
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+      </div>
     </div>
     <div className={styles.versus}>
-      <input ref={inputRef3} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-      <input ref={inputRef4} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+      <div className={styles.versus_box}>  
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+      </div>
+      <div className={styles.versus_box}>  
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+      </div>
     </div>
     <div className={styles.versus}>
-      <input ref={inputRef5} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-      <input ref={inputRef6} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+      <div className={styles.versus_box}>  
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+      </div>
+      <div className={styles.versus_box}>    
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+      </div>  
     </div>
     <div className={styles.versus}>
-      <input ref={inputRef7} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-      <input ref={inputRef8} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+      <div className={styles.versus_box}>    
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+      </div>
+      <div className={styles.versus_box}>  
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+        <div className={styles.img_div}>
+          <img src={url} alt="" />
+          <input ref={inputRef1} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
+        </div>
+      </div>
     </div>
-    <div className={styles.versus}>
-      <input ref={inputRef9} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-      <input ref={inputRef10} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-    </div>
-    <div className={styles.versus}>
-      <input ref={inputRef11} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-      <input ref={inputRef12} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-    </div>
-    <div className={styles.versus}>
-      <input ref={inputRef13} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-      <input ref={inputRef14} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-    </div>
-    <div className={styles.versus}>
-      <input ref={inputRef15} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-      <input ref={inputRef16} className={styles.input} type="file" accept="image/*" name="file" onChange={onChange}/>
-    </div>
-      {!loading && (<button className={`${styles.button} ${name ? styles.pink : styles.grey}`} onClick={onButtonClick}>  {name || 'No file'}  </button>)}
-      {loading && <div className={styles.loading}></div>}
   </div>
+  
   )
 });
 export default ImageFileInput;
