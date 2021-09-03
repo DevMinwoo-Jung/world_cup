@@ -1,0 +1,36 @@
+.input {
+  display: block;
+  cursor: pointer;
+  font-size: 29px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: alpha(opacity=0);
+  width: 5rem;
+  height: 5rem;
+  z-index: 2;
+  position: absolute;
+}
+
+.show_img {
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+}
+
+.input {
+  display: block;
+  cursor: pointer;
+  font-size: 29px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: alpha(opacity=0);
+  width: 5rem;
+  height: 5rem;
+  z-index: 2;
+  position: absolute;
+}
+
+.imgs {
+  display: flex;
+}

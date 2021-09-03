@@ -30,10 +30,8 @@ const WorldCupAddForm = ({FileInput, onAdd, cups}) => {
 
   return (
     <form ref={formRef} className={styles.addForm}>
-      <div>
         <input ref={titleRef} type="text" name="title" placeholder="월드컵 타이틀을 적어주세요!"/>
         <FileInput name={file.fileName} onFileChange={onFileChange} cups={cups}/>
-      </div>
         <Button name='Add' onClick={onSubmit}/>
     </form>
   );

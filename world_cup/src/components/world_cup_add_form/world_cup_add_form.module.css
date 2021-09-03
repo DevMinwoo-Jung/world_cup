@@ -1,5 +1,9 @@
 @value makerBlack, makerWhite from '../../common/colors.css';
 
+.input_div {
+  margin: 1rem;
+}
+
 .form {
   display: flex;
   width: 100%;
@@ -21,4 +25,9 @@
   border-bottom: 1px solid makerBlack;
   border-right: 1px solid makerBlack;
   background: makerWhite;
+}
+
+.inputs,
+.files {
+  margin: 1rem;
 }
