@@ -70,5 +70,5 @@ const ImageFileInput = memo(({imageUploader, name, onFileChange}) => {
   </div>
   
   )
-}); 
+});
 export default ImageFileInput;
